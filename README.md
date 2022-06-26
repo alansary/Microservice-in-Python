@@ -76,8 +76,8 @@ Start Minikube cluster
     $ docker-compose build
     $ docker-compose up -d
     ```
-7. Writing Kubernetes Manifest files for the application
-    Documentation - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+7. Writing Kubernetes Manifest files for the application<br/>
+    Documentation - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/<br/>
     Documentation - https://kubernetes.io/docs/concepts/services-networking/service/
     ```bash
     $ mkdir Kubernetes
