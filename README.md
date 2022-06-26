@@ -21,7 +21,7 @@ Documentation - https://flask.palletsprojects.com/en/2.1.x/installation/
     ```bash
     $ pip freeze > requirements.txt
     ```
-6. Building the docker image using Dockerfile
+6. Building the docker image using Dockerfile<br/>
 Start Minikube cluster
     ```bash
     $ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
