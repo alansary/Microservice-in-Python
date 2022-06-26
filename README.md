@@ -46,18 +46,18 @@ Start Minikube cluster
     ```
     Build docker image
     ```bash
-    $ docker build -t microservices-in-python-webapp:1.0 .
+    $ docker build -t webapp:1.0 .
     ```
     Run the container
     ```bash
-    $ docker run -d -p 80:5000 --name microservices-in-python-webapp microservices-in-python-webapp:1.0
+    $ docker run -d -p 80:5000 --name webapp webapp:1.0
     $ docker ps
     $ minikube ip
     ```
     Remove the container
     ```bash
     $ docker ps -a
-    $ docker rm -f microservices-in-python-webapp
+    $ docker rm -f webapp
     ```
     Remove the image
     ```bash
@@ -74,7 +74,7 @@ Start Minikube cluster
     ```bash
     $ touch docker-compose.yml
     $ docker-compose build
-    $ docker-compose up -d
+    # docker-compose up -d
     ```
 7. Writing Kubernetes Manifest files for the application<br/>
     Documentation - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/<br/>
@@ -88,7 +88,15 @@ Start Minikube cluster
     $ kubectl get po
     $ kubectl apply -f service.yml
     $ kubectl get po,svc
+    $ kubectl get all
+    $ kubectl get services
+    $ kubectl get node -o wide
     $ minikube ip
+    # INTERNAL-IP:NODE-PORT
+    # http://192.168.49.2:30100
+    $ kubectl describe service webapp-service
+    $ minikube service webapp-service
+    # http://127.0.0.1:50460
     ```
     Uninstall deployment and service
     ```bash

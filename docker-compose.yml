@@ -4,9 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: microservices-in-python-webapp:2.0
+    image: webapp:2.0
     ports:
-      - "80:5000"
+      - "5000:5000"
     restart: always
     networks: 
       - webnet

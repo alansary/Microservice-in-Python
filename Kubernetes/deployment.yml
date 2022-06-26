@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microservices-in-python-webapp-deployment
+  name: webapp-deployment
   labels:
-    app: microservices-in-python-webapp
+    app: webapp
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: microservices-in-python-webapp
+      app: webapp
   template:
     metadata:
       labels:
-        app: microservices-in-python-webapp
+        app: webapp
     spec:
       containers:
-      - name: microservices-in-python-webapp
-        image: microservices-in-python-webapp:1.0
+      - name: webapp
+        image: webapp:2.0
         ports:
         - containerPort: 5000
