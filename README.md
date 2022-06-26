@@ -1,8 +1,8 @@
 # Microservice in Python
 
-1. Installing Python 3.X
+1. Installing Python 3.X<br/>
 Documentation - https://www.python.org
-2. Creating Python Virtual Environment
+2. Creating Python Virtual Environment<br/>
 Documentation - https://docs.python.org/3/library/venv.html
     ```bash
     $ python3 -m venv ./microservices-in-python
