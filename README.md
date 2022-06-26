@@ -76,3 +76,22 @@ Start Minikube cluster
     $ docker-compose build
     $ docker-compose up -d
     ```
+7. Writing Kubernetes Manifest files for the application
+    Documentation - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+    Documentation - https://kubernetes.io/docs/concepts/services-networking/service/
+    ```bash
+    $ mkdir Kubernetes
+    $ touch Kubernetes/deployment.yml
+    $ touch Kubernetes/service.yml
+    $ cd Kubernetes
+    $ kubectl apply -f deployment.yml
+    $ kubectl get po
+    $ kubectl apply -f service.yml
+    $ kubectl get po,svc
+    $ minikube ip
+    ```
+    Uninstall deployment and service
+    ```bash
+    $ kubectl delete -f .
+    $ kubectl get po,svc
+    ```
