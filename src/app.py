@@ -9,18 +9,18 @@ def fetch_details():
 
     return hostname, ip_address
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def hello_world():
     return "<p>Hello, World!</p>"
 
-@app.route("/health", methods=["GET"])
+@app.route("/health")
 def health():
     return jsonify(status="UP")
 
-@app.route("/details")
+@app.route("/details", methods=["GET"])
 def details():
     hostname, ip_address = fetch_details()
     return render_template("index.html", hostname=hostname, ip_address=ip_address)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)
+    app.run(host="0.0.0.0", port=5000)
