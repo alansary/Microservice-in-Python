@@ -10,3 +10,14 @@ Documentation - https://docs.python.org/3/library/venv.html
     $ pip list
     ```
 3. Installing Python VS Code Extension
+4. Sample Flask Application<br/>
+Documentation - https://flask.palletsprojects.com/en/2.1.x/installation/
+    ```bash
+    $ pip install Flask
+    $ pip list
+    ```
+    Documentation - https://flask.palletsprojects.com/en/2.1.x/quickstart/#a-minimal-application
+5. Using Pip to Freeze Python Dependencies
+```bash
+$ pip freeze > requirements.txt
+```
